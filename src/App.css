@@ -1,0 +1,30 @@
+html{
+    user-select: none;
+}
+
+#colorInput{
+    width: 25vh;
+    height: 7.5vh;
+
+    min-width: 82.5px;
+    min-height: 25px;
+
+    border: none;
+    border-radius: 2vh;
+
+    background-color: rgb(63, 63, 63);
+
+    text-align: center;
+}   
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 1.25vh;
+}
