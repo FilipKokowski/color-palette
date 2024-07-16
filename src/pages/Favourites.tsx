@@ -52,16 +52,16 @@ export default function Favourites(){
             <div style={{width: '96vw', height: '37vh', display: 'flex', justifyContent:'space-evenly', alignItems: 'center', overflowX: 'scroll', overflowY: 'hidden'}}>
                 {context?.state.favourites.map((elem) => {
                     return(
-                        <div key={elem.hex.clean} style={{margin: '1vh 1vh 1vh 1vh', minWidth: '30vh', minHeight: '30vh', overflow: 'hidden', display: 'flex', flexDirection: 'column', backgroundColor: elem?.hex != undefined ? elem.hex.value : '#ffffff', width: '30vh', height: '30vh', borderRadius: '4vh', transition: 'background-color .25s ease'}}>
+                        <div key={elem.hex?.clean} style={{margin: '1vh 1vh 1vh 1vh', minWidth: '30vh', minHeight: '30vh', overflow: 'hidden', display: 'flex', flexDirection: 'column', backgroundColor: elem?.hex != undefined ? elem.hex?.value : '#ffffff', width: '30vh', height: '30vh', borderRadius: '4vh', transition: 'background-color .25s ease'}}>
                             <div style={{display: 'flex', justifyContent: 'end', width: '100%', height: '20%', color: getOppositeColor(elem?.hex == undefined ? "#ffffff" : elem.hex.value)}}>
                                 <div onClick={() => removeFromFavourites(elem)} style={{zIndex: '100', display: 'flex', justifyContent: 'center', alignItems: 'center', width: '20%', height: '100%', margin: '.5vh .5vh 1vh 1vh', transition: 'color .5s ease'}}>
-                                <FaStar id={elem.hex.clean}></FaStar>
+                                <FaStar id={elem.hex?.clean!}></FaStar>
                                 </div>
                             </div>
                             <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '-10%', width: '100%', height: '80%'}}>
                             <div style={{width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-                                <i style={{color: getOppositeColor(elem?.hex == undefined ? "#ffffff" : elem.hex.value), transition: 'color .5s ease', textAlign: 'center'}}><b>{elem?.name?.value == undefined ? "White" : elem?.name?.value}</b></i>
-                                <i style={{color : getOppositeColor(elem?.hex == undefined ? "#ffffff" : elem.hex.value), fontSize: '60%', userSelect: 'all'}}>{elem.hex.value}</i>
+                                <i style={{color: getOppositeColor(elem?.hex == undefined ? "#ffffff" : elem.hex?.value), transition: 'color .5s ease', textAlign: 'center'}}><b>{elem?.name?.value == undefined ? "White" : elem?.name?.value}</b></i>
+                                <i style={{color : getOppositeColor(elem?.hex == undefined ? "#ffffff" : elem.hex?.value), fontSize: '60%', userSelect: 'all'}}>{elem.hex?.value}</i>
                             </div>
                             </div>
                         </div>
