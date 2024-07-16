@@ -155,7 +155,7 @@ export function Home(){
           </div>lors</h1>
       <div style={{overflow: 'hidden', display: 'flex', flexDirection: 'column', backgroundColor: colorInfo?.hex != undefined ? colorInfo.hex.value : '#ffffff', width: '30vh', height: '30vh', minHeight: '100px', minWidth: '100px', borderRadius: '4vh', transition: 'background-color .25s ease'}}>
         <div ref={starRef} id='favourites' style={{display: 'flex', justifyContent: 'end', width: '100%', height: '20%', color: getOppositeColor(colorInfo?.hex == undefined ? "#ffffff" : colorInfo.hex.value)}}>
-            { currentUser != null && con?.state.favourites.find(item => item.hex.clean === colorInfo?.hex.clean) === undefined ?
+            { currentUser != null && con?.state.favourites.find(item => item.hex?.clean === colorInfo?.hex?.clean) === undefined ?
             <div onClick={() => addToFavourites()} onMouseLeave={() => mouseOver(starRef)} onMouseEnter={() => mouseOver(starRef)} style={{zIndex: '100', display: 'flex', justifyContent: 'center', alignItems: 'center', width: '20%', height: '100%', margin: '.5vh .5vh 1vh 1vh', transition: 'color .5s ease'}}>
               <FaStar></FaStar>
             </div>
