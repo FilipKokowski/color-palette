@@ -148,9 +148,9 @@ export function Home(){
       <h1 ref={titleRef} style={{color:'white', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>C
           <div id='login' style={{color: colorInfo?.hex == undefined ? titleRef.current?.style.color : colorInfo.hex.value}} ref={loginRef}>
               { currentUser == null ?
-                  <MdAccountCircle onClick={() => navigate('login')} onMouseLeave={() => mouseOver(loginRef)} onMouseEnter={() => mouseOver(loginRef)} fontSize={'75%'} style={{height: '100%', marginTop: '3.5vh', transition: 'color .23s ease'}}></MdAccountCircle>
+                  <MdAccountCircle onClick={() => navigate('login')} onMouseLeave={() => mouseOver(loginRef)} onMouseEnter={() => mouseOver(loginRef)} fontSize={'75%'} style={{height: '100%', marginTop: '1.1rem', transition: 'color .23s ease'}}></MdAccountCircle>
                   :
-                  <MdStars onClick={() => navigate('favourites')} onMouseLeave={() => mouseOver(loginRef)} onMouseEnter={() => mouseOver(loginRef)} fontSize={'75%'} style={{height: '100%', marginTop: '3.5vh', transition: 'color .23s ease'}}></MdStars>
+                  <MdStars onClick={() => navigate('favourites')} onMouseLeave={() => mouseOver(loginRef)} onMouseEnter={() => mouseOver(loginRef)} fontSize={'75%'} style={{height: '100%', marginTop: '1.1rem', transition: 'color .23s ease'}}></MdStars>
               }
           </div>lors</h1>
       <div style={{overflow: 'hidden', display: 'flex', flexDirection: 'column', backgroundColor: colorInfo?.hex != undefined ? colorInfo.hex.value : '#ffffff', width: '30vh', height: '30vh', minHeight: '100px', minWidth: '100px', borderRadius: '4vh', transition: 'background-color .25s ease'}}>

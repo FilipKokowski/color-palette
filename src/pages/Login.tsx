@@ -91,7 +91,7 @@ export function Login(){
 
     return(
         <div style={{width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-            <h1 ref={titleRef} style={{ marginBottom: '0', color:'white', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>C<div id='login' ref={homeRef}><IoArrowBackCircle onMouseEnter={(e) => highlight(e, homeRef)} onMouseLeave={(e) => highlight(e, homeRef)} onClick={() => navigate('/')} fontSize={'75%'} style={{height: '100%', marginTop: '3.5vh', transition: 'color .23s ease'}}></IoArrowBackCircle></div>lors</h1>
+            <h1 ref={titleRef} style={{ marginBottom: '0', color:'white', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>C<div id='login' ref={homeRef}><IoArrowBackCircle onMouseEnter={(e) => highlight(e, homeRef)} onMouseLeave={(e) => highlight(e, homeRef)} onClick={() => navigate('/')} fontSize={'75%'} style={{height: '100%', marginTop: '1.1rem', transition: 'color .23s ease'}}></IoArrowBackCircle></div>lors</h1>
             <div>
                 {(!register) ?
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
