@@ -2,6 +2,10 @@ html{
     user-select: none;
 }
 
+#root{
+    background-color: rgb(34, 33, 33);
+}
+
 #colorInput{
     width: 25vh;
     height: 7.5vh;
