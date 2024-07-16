@@ -1,4 +1,4 @@
-import { createRef, useContext } from "react";
+import { createRef, useContext, useEffect } from "react";
 import { IoArrowBackCircle } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { userContext } from "../contexts/userContextProvider";
@@ -33,12 +33,17 @@ export default function Favourites(){
             ref.current!.style.color = prevColor;
     }
 
+    useEffect(() => {
+        window.localStorage.setItem(context?.state.username!, JSON.stringify(context?.state!))
+    }, [context])
+
 
     const removeFromFavourites = (c : Color) => {
         context?.setState((prevState) => ({
             ...prevState,
             favourites : prevState.favourites.filter(favourite => favourite !== c),
         }));
+
     };
 
     return(
